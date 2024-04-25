@@ -27,7 +27,7 @@ const AttenanceInfo = () => {
       };
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/attendance`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/attendance`,
           {
             method: "POST",
             body: JSON.stringify(userInfo),

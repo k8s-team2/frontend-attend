@@ -23,7 +23,7 @@ export default function Home() {
     formData.append("password", password);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         method: "POST",
         body: formData,
       });
@@ -35,7 +35,7 @@ export default function Home() {
         localStorage.setItem("id", data.id);
         localStorage.setItem("name", data.name);
         // 로그인 성공 시, attendance 페이지로 이동
-        router.push("/checkin");
+        router.push("/check");
       } else {
         setMessage(data.message);
       }

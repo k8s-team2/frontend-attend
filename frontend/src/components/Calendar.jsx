@@ -69,7 +69,7 @@ const Calendar = () => {
     };
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/attendance/month`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/attendance/month`,
         {
           method: "POST",
           body: JSON.stringify(userInfo),

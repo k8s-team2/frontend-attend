@@ -18,7 +18,7 @@ const AttendButton = () => {
       const userInfo = { id: userid, name: username };
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/checkstatus`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/checkstatus`,
           {
             method: "POST",
             body: JSON.stringify(userInfo),
@@ -50,7 +50,7 @@ const AttendButton = () => {
     };
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkin`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/checkin`, {
         method: "POST",
         body: JSON.stringify(userInfo),
         headers: {
@@ -76,7 +76,7 @@ const AttendButton = () => {
     };
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/checkout`, {
         method: "POST",
         body: JSON.stringify(userInfo),
         headers: {
