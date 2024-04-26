@@ -28,7 +28,7 @@ const page = () => {
   }
 
   function goToQnA() {
-    router.push("/qa"); // "qna"는 실제로 QnA 섹션의 경로에 맞게 수정해야 합니다.
+    router.push("http://34.64.60.216/qa"); // "qna"는 실제로 QnA 섹션의 경로에 맞게 수정해야 합니다.
   }
   
   return (
